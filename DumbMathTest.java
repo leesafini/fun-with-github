@@ -63,11 +63,10 @@ public class DumbMathTest {
 
 	@Test(expected = IllegalArgumentException.class)
 	public void testAddFractionDenominatorZero() {
-		int n1 = 1;
-		int d1 = 0; 
-		int n2 = 1;
-		int d2 = 4;
-		double actual = DumbMath.addFraction(n1, d1, n2, d2);
-		
+		int frac1Numerator = 1;
+		int frac1Denominator= 0; 
+		int frac2Numerator = 1;
+		int frac2Denominator = 4;
+		double actual = DumbMath.addFraction(frac1Numerator, frac1Denominator, frac2Numerator, frac2Denominator);
 	}
 }
