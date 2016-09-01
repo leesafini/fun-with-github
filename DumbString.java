@@ -11,6 +11,9 @@ public class DumbString {
 	 * @return true if all chars in s are digits ('0'-'9') and false otherwise
 	 */
 	public boolean allDigits(String s) {
+		if(s == null) {
+			return false;
+		}
 		for (char c : s.toCharArray()) {
 			if (Character.isDigit(c) == false)
 				return false;
