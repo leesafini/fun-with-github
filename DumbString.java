@@ -19,12 +19,12 @@ public class DumbString {
 	}
 	
 	/**
-	 * Determines the number of letters that the two parameters have in common
+	 * Determines the number of characters that the two parameters have in common
 	 * @param a
 	 * @param b
-	 * @return the number of letters the two Strings have in common; -1 if either is null
+	 * @return the number of chars the two Strings have in common; -1 if either is null
 	 */
-	public static int lettersInCommon(String a, String b) {
+	public static int charsInCommon(String a, String b) {
 		if (a == null || b == null) return -1;
 		int common = 0;
 		for (char c : a.toCharArray()) {
