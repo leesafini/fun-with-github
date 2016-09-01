@@ -52,5 +52,13 @@ public class DumbMathTest {
 		assertEquals(expected, actual, 0.00000000001);
 	}
 	
+	@Test
+	public void testMultiplyTwoNegativeNumbers() {
+		int n1 = -5;
+		int n2 = -10;
+		double expected = 50.0;
+		double actual = DumbMath.multiply(n1, n2);
+		assertEquals(expected, actual, 0.00000000001);
+	}
 
 }
