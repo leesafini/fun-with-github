@@ -61,4 +61,13 @@ public class DumbMathTest {
 		assertEquals(expected, actual, 0.00000000001);
 	}
 
+	@Test(expected = IllegalArgumentException.class)
+	public void testAddFractionDenominatorZero() {
+		int n1 = 1;
+		int d1 = 0; 
+		int n2 = 1;
+		int d2 = 4;
+		double actual = DumbMath.addFraction(n1, d1, n2, d2);
+		
+	}
 }
