@@ -14,6 +14,9 @@ public class DumbMath {
 		if (a > 0 && b > 0 && sum < 0)
 			throw new ArithmeticException("Overflow when adding " + a + " and " + b);
 
+		// check for underflow
+		if (a < 0 && b < 0 && sum > 0)
+			throw new ArithmeticException("Underflow when adding " + a + " and " + b);			
 		return sum;
 	}
 
