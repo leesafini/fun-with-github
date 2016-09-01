@@ -25,5 +25,14 @@ public class DumbStringTest {
 		int actual = DumbString.charsInCommon(a, b);
 		assertEquals(expected, actual);
 	}
+
+	@Test
+	public void testLettersInCommonNullArgument() {
+		String a = "aa";
+		String b = null;
+		int expected = -1;
+		int actual = DumbString.lettersInCommon(a, b);
+		assertEquals(expected, actual);
+	}
 	
 }
