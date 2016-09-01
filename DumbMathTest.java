@@ -24,7 +24,7 @@ public class DumbMathTest {
 	}
 	
 	@Test(expected = ArithmeticException.class)
-	public void overflow() {
+	public void testAddIntegerOverflow() {
 		int a = Integer.MAX_VALUE;
 		int b = Integer.MAX_VALUE;
 		DumbMath.add(a, b);
