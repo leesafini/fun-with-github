@@ -18,11 +18,11 @@ public class DumbStringTest {
 	}
 	
 	@Test
-	public void testLettersInCommonDoubleCount() {
+	public void testCharsInCommonDoubleCount() {
 		String a = "aa";
 		String b = "ba";
 		int expected = 1;
-		int actual = DumbString.lettersInCommon(a, b);
+		int actual = DumbString.charsInCommon(a, b);
 		assertEquals(expected, actual);
 	}
 	
