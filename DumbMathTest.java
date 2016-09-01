@@ -24,7 +24,7 @@ public class DumbMathTest {
 	}
 	
 	@Test(expected = ArithmeticException.class)
-	public void overflow() {
+	public void testAddIntegerOverflow() {
 		int a = Integer.MAX_VALUE;
 		int b = Integer.MAX_VALUE;
 		DumbMath.add(a, b);
@@ -61,4 +61,12 @@ public class DumbMathTest {
 		assertEquals(expected, actual, 0.00000000001);
 	}
 
+	@Test(expected = IllegalArgumentException.class)
+	public void testAddFractionDenominatorZero() {
+		int frac1Numerator = 1;
+		int frac1Denominator= 0; 
+		int frac2Numerator = 1;
+		int frac2Denominator = 4;
+		double actual = DumbMath.addFraction(frac1Numerator, frac1Denominator, frac2Numerator, frac2Denominator);
+	}
 }
