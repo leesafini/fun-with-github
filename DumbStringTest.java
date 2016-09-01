@@ -7,16 +7,14 @@ public class DumbStringTest {
 
 	@Test
 	public void testAllDigitsTrue() {
-		DumbString ds = new DumbString();
 		String s = "12345";
-		assertTrue(ds.allDigits(s));
+		assertTrue(DumbString.allDigits(s));
 	}
 
 	@Test
 	public void testAllDigitsFalse() {
-		DumbString ds = new DumbString();
 		String s = "abcd5";
-		assertFalse(ds.allDigits(s));
+		assertFalse(DumbString.allDigits(s));
 	}
 	
 	@Test
