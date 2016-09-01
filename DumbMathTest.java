@@ -52,6 +52,7 @@ public class DumbMathTest {
 		assertEquals(expected, actual, 0.00000000001);
 	}
 	
+
 	@Test
 	public void testMultiplyTwoNegativeNumbers() {
 		int n1 = -5;
@@ -69,4 +70,14 @@ public class DumbMathTest {
 		int frac2Denominator = 4;
 		double actual = DumbMath.addFraction(frac1Numerator, frac1Denominator, frac2Numerator, frac2Denominator);
 	}
+
+  @Test
+  public void testAddDouble() {
+      double a = 12.01;
+      double b = 3.02;
+      double expected = 15.03;
+      double actual = DumbMath.add(a, b);
+      assertEquals(expected, actual);
+  }
+
 }
