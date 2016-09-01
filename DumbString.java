@@ -27,10 +27,19 @@ public class DumbString {
 	public static int charsInCommon(String a, String b) {
 		if (a == null || b == null) return -1;
 		int common = 0;
+
+		// Get letter counts for each string
+		int[] letterCount1 = new int[26], letterCount2 = new int[26];
 		for (char c : a.toCharArray()) {
-			if (b.indexOf(c) != -1) {
-				common++;
-			}
+			letterCount1[c-'a'] ++;
+		}
+		for (char c: b.toCharArray()) {
+			letterCount2[c-'a'] ++;
+		}
+
+		// The letters in common are the sum of the lower counts in each string
+		for (int i = 0; i < 26; i ++) {
+			common += Math.min(letterCount1[i], letterCount2[i]);
 		}
 		return common;
 	}
