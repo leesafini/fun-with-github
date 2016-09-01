@@ -18,7 +18,7 @@ public class DumbMathTest {
 	public void testAddNegativeAndNegative() {
 		int a = -8;
 		int b = -3;
-		int expected = 9;
+		int expected = -11;
 		int actual = DumbMath.add(a, b);
 		assertEquals(expected, actual);
 	}
