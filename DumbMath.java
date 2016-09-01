@@ -16,6 +16,11 @@ public class DumbMath {
 
 		return sum;
 	}
+
+	public static int subtract(int a, int b) {
+                int difference = a - b;
+                return difference;
+        }
 	
 	
 	public static int multiply(int a, int b) {
