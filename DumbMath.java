@@ -11,6 +11,24 @@ public class DumbMath {
      add(int a, int b)
      Adds two integers a, b together and returns the result
      */
+    
+    public static int add(int a, int b) {
+        int sum = a + b;
+        
+        // check for overflow
+        if (a > 0 && b > 0 && sum < 0)
+            throw new ArithmeticException("Overflow when adding " + a + " and " + b);
+        // check for underflow
+        if (a < 0 && b < 0 && sum > 0)
+            throw new ArithmeticException("Underflow when adding " + a + " and " + b);
+        return sum;
+    }
+    
+    /**
+     add(double a, double b)
+     Adds two doubles a, b together and returns the result
+     */
+    
   public static double add(double a, double b) {
     double sum = a + b;
 
