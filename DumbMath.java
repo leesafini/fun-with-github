@@ -24,14 +24,6 @@ public class DumbMath {
 	}
 	
 
-	public static void main(String[] args) {
-		int a = 8;
-		int b = 2; 
-		int p = DumbMath.multiply(a, b);
-		System.out.println(p);
-	}
-	
-
 	public static double addFraction(int n1, int d1, int n2, int d2) {
 		if (d1 == 0 || d2 == 0)
 			throw new IllegalArgumentException("Denominator is zero!");
