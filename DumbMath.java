@@ -16,8 +16,19 @@ public class DumbMath {
 
 		return sum;
 	}
-	
-	
+
+
+  public static double add(double a, double b) {
+    double sum = a + b;
+
+    // check for overflow
+    if (a > 0 && b > 0 && sum < 0)
+      throw new ArithmeticException("Overflow when adding " + a + " and " + b);
+
+    return sum;
+  }
+
+
 	public static int multiply(int a, int b) {
 		int product = a * b;
 		return product;
