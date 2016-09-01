@@ -10,7 +10,7 @@ public class DumbString {
 	 * @param s String to check
 	 * @return true if all chars in s are digits ('0'-'9') and false otherwise
 	 */
-	public boolean allDigits(String s) {
+	public static boolean allDigits(String s) {
 		if(s == null) {
 			return false;
 		}
