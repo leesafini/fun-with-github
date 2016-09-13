@@ -29,15 +29,16 @@ public class DumbMath {
      Adds two doubles a, b together and returns the result
      */
     
-  public static double add(double a, double b) {
+    public static double add(double a, double b) {
     double sum = a + b;
 
     // check for overflow
-    if (a > 0 && b > 0 && sum < 0)
+    if (Double.isInfinite(sum))
       throw new ArithmeticException("Overflow when adding " + a + " and " + b);
     // check for underflow
-    if (a < 0 && b < 0 && sum > 0)
+    if (Double.isInfinite(1/sum))
         throw new ArithmeticException("Underflow when adding " + a + " and " + b);
+    System.out.println(sum);
     return sum;
   }
 
