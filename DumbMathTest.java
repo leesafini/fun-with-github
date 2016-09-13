@@ -78,10 +78,19 @@ public class DumbMathTest {
 	}
 
   @Test
-  public void testAddDouble() {
+  public void testAddDoublePositiveAndPositive() {
       double a = 12.01;
       double b = 3.02;
       double expected = 15.03;
+      double actual = DumbMath.add(a, b);
+      assertEquals(expected, actual);
+  }
+
+   @Test
+  public void testAddDoubleNegativeAndNegative() {
+      double a = -12.01;
+      double b = -3.02;
+      double expected = -15.03;
       double actual = DumbMath.add(a, b);
       assertEquals(expected, actual);
   }
