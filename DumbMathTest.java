@@ -95,4 +95,18 @@ public class DumbMathTest {
       assertEquals(expected, actual);
   }
 
+  @Test(expected = ArithmeticException.class)
+  public void testAddDoubleOverflow() {
+	  double a = Double.MAX_VALUE;
+	  double b = Double.MAX_VALUE;
+	  DumbMath.add(a, b);
+  }
+  
+  @Test(expected = ArithmeticException.class)
+  public void testAddDoubleUnderflow() {
+	  double a = Double.MIN_VALUE;
+	  double b = Double.MIN_VALUE;
+	  DumbMath.add(a, b);
+  }
+
 }
